@@ -1,9 +1,16 @@
 import './style/style.css'
-import MessageBox from './components/message-box'
+import { Link, Route, Routes } from 'react-router-dom';
+import Login from './login'
+import Chat from './chat'
+import Register from './register'
 
 function App() {
   return (
-    <MessageBox />
+    <Routes>
+      <Route path={'/'} element={<Chat />}></Route>
+      <Route path={'/login'} element={<Login />}></Route>
+      <Route path={'/register'} element={<Register />}></Route>
+    </Routes>
   )
 }
 
