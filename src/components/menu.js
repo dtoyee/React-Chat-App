@@ -24,7 +24,9 @@ function Menu() {
             <Link to={'/'}>Home</Link> |
             {
                 (user) ?
-                    <span onClick={logout}>Logout</span> : 
+                    <> 
+                        <span onClick={logout}>Logout</span>
+                    </> : 
                     <>
                         <Link to={'/login'}>Login</Link> |
                         <Link to={'/register'}>Register</Link>
